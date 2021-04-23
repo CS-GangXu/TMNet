@@ -20,8 +20,6 @@ This is the official PyTorch implementation of TMNet in the CVPR 2021 paper "Tem
 - Python packages: ```pip install numpy opencv-python lmdb pyyaml pickle5 matplotlib seaborn```
 
 ## Installation
-Install the required packages: ```pip install -r requirements.txt```
-
 First, make sure your machine has a GPU, which is required for the DCNv2 module.
 
 1. Clone the TMNet repository.
