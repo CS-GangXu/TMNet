@@ -73,4 +73,4 @@ If you find the code helpful in your research or work, please cite the following
 Our code is inspired by [Zooming-Slow-Mo-CVPR-2020](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020) and [EDVR](https://github.com/xinntao/EDVR).
 
 ## Contact
-If you have any questions, feel free to E-mail [Gang Xu](gangxu@mail.nankai.edu.cn).
+If you have any questions, feel free to E-mail Gang Xu with gangxu@mail.nankai.edu.cn.
