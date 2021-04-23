@@ -34,11 +34,11 @@ cd $ROOT/codes/models/modules/DCNv2
 bash make.sh
 python test.py
 ```
-## Demo
+## Demo (To be uploaded before April 24, 2021 11:59PM (Pacific Time))
 
-## Training
+## Training (To be uploaded before April 24, 2021 11:59PM (Pacific Time))
 
-## Testing
+## Testing (To be uploaded before April 24, 2021 11:59PM (Pacific Time))
 
 ## Citations
 
