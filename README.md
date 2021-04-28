@@ -45,7 +45,7 @@ If you find the code helpful in your research or work, please cite the following
 ```BibTeX
 @InProceedings{xu2021temporal,
   author = {Gang Xu and Jun Xu and Zhen Li and Liang Wang and Xing Sun and Mingming Cheng},
-  title = {Temporal Modulation Network for Controllable Space-Time VideoSuper-Resolution},
+  title = {Temporal Modulation Network for Controllable Space-Time Video Super-Resolution},
   booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   month = {June},
   year = {2021}
