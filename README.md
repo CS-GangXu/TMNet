@@ -5,7 +5,7 @@
 This is the official PyTorch implementation of TMNet in the CVPR 2021 paper "[Temporal Modulation Network for Controllable Space-Time VideoSuper-Resolution](https://arxiv.org/abs/2104.10642)". Our TMNet can flexibly interpolate intermediate frames for space-time video super-resolution (STVSR). 
 
 # Updates
-- 2021.05.07 Upload the code of training and testing.
+- 2021.05.08 Upload the code of training and testing.
 - 2021.04.23 Init the repositories.
 
 # To be Uploaded
@@ -19,7 +19,8 @@ This is the official PyTorch implementation of TMNet in the CVPR 2021 paper "[Te
 0. [Test](#Test)
 0. [Results](#Results)
 0. [Citation](#Testing)
-0. [Acknowledgement](#Acknowledgement)
+0. [Acknowledgment](#Acknowledgment)
+0. [Contact](#Contact)
 
 # Introduction
 Space-time video super-resolution (STVSR) aims to increase the spatial and temporal resolutions of low-resolution and low-frame-rate videos. Recently, deformable convolution based methods have achieved promising STVSR performance, but they could only infer the intermediate frame pre-defined in the training stage. Besides, these methods undervalued the short-term motion cues among adjacent frames. In this paper, we propose a Temporal Modulation Network (TMNet) to interpolate arbitrary intermediate frame(s) with accurate high-resolution reconstruction. Specifically, we propose a Temporal Modulation Block (TMB) to modulate deformable convolution kernels for controllable feature interpolation. To well exploit the temporal information, we propose a Locally-temporal Feature Comparison (LFC) module, along with the Bi-directional Deformable ConvLSTM, to extract short-term and long-term motion cues in videos. Experiments on three benchmark datasets demonstrate that our TMNet outperforms previous STVSR methods.
@@ -142,4 +143,4 @@ If you find the code helpful in your research or work, please cite our paper.
 Our code is built on [Zooming-Slow-Mo-CVPR-2020](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020) and [EDVR](https://github.com/xinntao/EDVR). We thank the authors for sharing their codes.
 
 # Contact
-If you have any questions, feel free to E-mail me with gangxu@mail.nankai.edu.cn.
+If you have any questions, feel free to E-mail me with [gangxu@mail.nankai.edu.cn](gangxu@mail.nankai.edu.cn).

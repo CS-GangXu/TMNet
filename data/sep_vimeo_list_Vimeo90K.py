@@ -1,9 +1,10 @@
 import os, shutil
 
 if __name__ ==  "__main__":
-    inPath = '/data/datasets/SR/vimeo_septuplet/sequences/'
-    outPath = '/data/datasets/SR/vimeo_septuplet/sequences/test/'
-    guide = '/data/datasets/SR/vimeo_septuplet/sep_testlist.txt'
+    mode = 'train'
+    inPath = '/home/ubuntu/Disk/dataset/Vimeo-90k/vimeo_septuplet/sequences/'
+    outPath = '/home/ubuntu/Disk/dataset/Vimeo-90k/vimeo_septuplet/sequences/' + mode + '/'
+    guide = '/home/ubuntu/Disk/dataset/Vimeo-90k/vimeo_septuplet/sep_' + mode + 'list.txt'
     
     f = open(guide, "r")
     lines = f.readlines()
