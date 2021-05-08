@@ -2,7 +2,7 @@
   <img src="./images/logo_1.png" width="175">
 </p>
 
-This is the official PyTorch implementation of TMNet in the CVPR 2021 paper "[Temporal Modulation Network for Controllable Space-Time VideoSuper-Resolution](https://arxiv.org/abs/2104.10642)". Our TMNet can flexibly interpolate intermediate frames for space-time video super-resolution (STVSR). 
+This is the official PyTorch implementation of TMNet in the CVPR 2021 paper "[Temporal Modulation Network for Controllable Space-Time Video Super-Resolution](https://arxiv.org/abs/2104.10642)". Our TMNet can flexibly interpolate intermediate frames for space-time video super-resolution (STVSR). 
 
 # Updates
 - 2021.05.08 Upload the code of training and testing.
