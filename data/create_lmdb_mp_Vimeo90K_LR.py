@@ -13,7 +13,7 @@ import cv2
 try:
     sys.path.append(osp.dirname(osp.dirname(osp.abspath(__file__))))
     import data_util as data_util
-    import util as util
+    import util_old as util
 except ImportError:
     pass
 
