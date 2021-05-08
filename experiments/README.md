@@ -1,0 +1,1 @@
+The training files are place into this folder.

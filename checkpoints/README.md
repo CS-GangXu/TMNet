@@ -1,0 +1,1 @@
+You can put the checkpoints into this folder
