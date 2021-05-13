@@ -48,6 +48,18 @@ git clone https://github.com/CS-GangXu/TMNet.git
 ```
 
 ### 2. Compile the DCNv2 (```$ROOT``` means the working directory dir of the code of TMNet).
+You should first set configuration of the ```make.sh```
+```
+#!/usr/bin/env bash
+
+# You may need to modify the following paths before compiling.
+CUDA_HOME=/usr/local/cuda-10.0 \
+CUDNN_INCLUDE_DIR=/usr/local/cuda-10.0/include \
+CUDNN_LIB_DIR=/usr/local/cuda-10.0/lib64 \
+
+python setup.py build develop
+```
+Then, run the ```make.sh```:
 ```
 cd $ROOT/models/modules/DCNv2
 bash make.sh
