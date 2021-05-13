@@ -48,7 +48,7 @@ git clone https://github.com/CS-GangXu/TMNet.git
 ```
 
 ### 2. Compile the DCNv2 (```$ROOT``` means the working directory dir of the code of TMNet).
-You should first set configuration of the ```make.sh```
+You should first set configuration of the ```$ROOT/models/modules/DCNv2/make.sh```
 ```
 #!/usr/bin/env bash
 
