@@ -156,3 +156,6 @@ Our code is built on [Zooming-Slow-Mo-CVPR-2020](https://github.com/Mukosame/Zoo
 
 # Contact
 If you have any questions, feel free to E-mail me with [gangxu@mail.nankai.edu.cn](gangxu@mail.nankai.edu.cn).
+
+# License
+The source code is free for research and education use only. Any comercial use should get formal permission first.
