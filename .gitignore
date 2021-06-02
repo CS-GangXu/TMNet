@@ -1,9 +1,10 @@
 .history
 .vscode
-# checkpoints/*
-# datasets/*
-# evaluations/*
-# experiments/*
+checkpoints/*
+datasets/*
+evaluations/*
+experiments/*
 __pycache__
 demo.py
 utils/evaluation_demo.py
+jittor/*

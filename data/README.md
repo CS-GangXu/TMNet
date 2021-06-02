@@ -73,7 +73,27 @@ Please copy the ```Vimeo7_train_keys.pkl``` into the folder with higher level. A
 ```
 
 ## Vid4 Dataset
-To be uploaded...
+You can download Vid4 dataset (```vid4.tar```) via [Link](https://drive.google.com/drive/folders/1PjXClB-S8pyB6y1UWJQnZK7fela5Lcu1?usp=sharing). If you download the Vid4 dataset, you can extract the image from ```vid4.tar``` and put them into ```$ROOT/datasets/vid4```. We assume that you can get a folder with the following structure:
+```
+vid4
+├── HR
+│   ├── calendar
+│   │   ├── 00000000.png
+│   │   ├── ...
+│   │   └── ***.png
+│   ├── city
+│   ├── foliage
+│   └── walk
+└── LR
+    ├── calendar
+    │   ├── 00000000.png
+    │   ├── ...
+    │   └── ***.png
+    ├── city
+    ├── foliage
+    └── walk
+```
+We only use this dataset for evaluation.
 
 ## Adobe240fps Dataset
-To be uploaded...
+You can download Adobe240fps via [Link](http://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring/DeepVideoDeblurring_Dataset_Original_High_FPS_Videos.zip),

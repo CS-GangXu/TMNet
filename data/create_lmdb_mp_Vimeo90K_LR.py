@@ -21,14 +21,11 @@ except ImportError:
 mode = 'LR' # 'GT' or 'LR
 
 phase = 'train' # 'train
-if mode == 'GT':
-    img_folder = './Vimeo-90k/vimeo_septuplet/sequences/' + phase
-    lmdb_save_path = './Vimeo-90k/vimeo_septuplet/vimeo7_' + phase + '_GT.lmdb'
-    H_dst, W_dst = 256, 448
-elif mode == 'LR':
-    img_folder = './Vimeo-90k/vimeo_septuplet/sequences_LR/' + phase
-    lmdb_save_path = './Vimeo-90k/vimeo_septuplet/vimeo7_' + phase + '_LR7.lmdb'
-    H_dst, W_dst = 64, 112
+
+img_folder = './Vimeo-90k/vimeo_septuplet/sequences_LR/' + phase
+lmdb_save_path = './Vimeo-90k/vimeo_septuplet/vimeo7_' + phase + '_LR7.lmdb'
+H_dst, W_dst = 64, 112
+
 txt_file = './Vimeo-90k/vimeo_septuplet/sep_' + phase + 'list.txt'
 batch = 3000 # depending on your mem size
 n_thread = 40 # depending on your gpu
