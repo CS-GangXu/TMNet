@@ -9,3 +9,5 @@ demo.py
 utils/evaluation_demo.py
 jittor/*
 materials
+evaluations_jittor/*
+tmnetInJittor_d4/*

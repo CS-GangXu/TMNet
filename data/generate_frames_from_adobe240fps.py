@@ -5,6 +5,8 @@ import glob
 import cv2
 import os
 
+mov_files = glob.glob("/home/ubuntu/Dataset/adobe240fps/original_high_fps_videos/*")
+
 def check_if_folder_exist(folder_path='/home/ubuntu/'):
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
@@ -12,8 +14,6 @@ def check_if_folder_exist(folder_path='/home/ubuntu/'):
         if not os.path.isdir(folder_path):
             print('Folder: ' + folder_path + ' exists and is not a folder!')
             exit()
-
-mov_files = glob.glob("/home/ubuntu/Dataset/adobe240fps/DeepVideoDeblurring_Dataset_Original_High_FPS_Videos/original_high_fps_videos/*")
 
 name_list = []
 for i, mov_path in enumerate(mov_files):
@@ -38,7 +38,7 @@ for i, mov_path in enumerate(mov_files):
     
     j = 0
     video = cv2.VideoCapture(mov_path)
-    save_folder = os.path.join('/home/ubuntu/Dataset/adobe240fps/visualization/', mov_path.split('/')[-1].split('.')[0])
+    save_folder = os.path.join('/home/ubuntu/Media/hdd1/Dataset/adobe240fps/visualization/', mov_path.split('/')[-1].split('.')[0])
     check_if_folder_exist(save_folder)
     success, frame = video.read()
     while success:
@@ -49,6 +49,7 @@ for i, mov_path in enumerate(mov_files):
         success, frame = video.read()
         print(str(i) + ' ' + str(j))
         j += 1
+    
     # end_point = int(len(single_list)/10) * 10
     # single_list = single_list[0:end_point]
     # name_list += single_list
