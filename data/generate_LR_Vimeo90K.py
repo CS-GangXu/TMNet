@@ -21,7 +21,7 @@ for dirpath, subdirnames, filenames in os.walk(folder_root):
         folder_leaf.append(dirpath)
     else:
         folder_branch.append(dirpath)
-
+z
     for i in range(len(filenames)):
         file_leaf.append(os.path.join(dirpath, filenames[i]))
 

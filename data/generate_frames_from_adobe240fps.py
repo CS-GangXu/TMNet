@@ -4,8 +4,35 @@ from PIL import Image
 import glob
 import cv2
 import os
+import shutil
 
-mov_files = glob.glob("/home/ubuntu/Dataset/adobe240fps/original_high_fps_videos/*")
+# Configuration
+# ============================
+
+videoFolder = '../datasets/adobe240fps/video'
+frameFolder = '../datasets/adobe240fps/frame'
+
+train_txt = '../datasets/adobe240fps/adobe240fps_folder_train.txt'
+valid_txt = '../datasets/adobe240fps/adobe240fps_folder_valid.txt'
+test_txt = '../datasets/adobe240fps/adobe240fps_folder_test.txt'
+
+# Run
+# ============================
+
+with open(train_txt) as f:
+    temp = f.readlines()
+    train_list = [v.strip() for v in temp]
+
+with open(valid_txt) as f:
+    temp = f.readlines()
+    valid_list = [v.strip() for v in temp]
+
+with open(test_txt) as f:
+    temp = f.readlines()
+    test_list = [v.strip() for v in temp]
+
+
+mov_files = glob.glob(os.path.join(videoFolder, '*'))
 
 def check_if_folder_exist(folder_path='/home/ubuntu/'):
     if not os.path.exists(folder_path):
@@ -17,41 +44,46 @@ def check_if_folder_exist(folder_path='/home/ubuntu/'):
 
 name_list = []
 for i, mov_path in enumerate(mov_files):
-    # single_list = []
-    # if i == 0:
-    #     pass
-    # else:
-    #     break
-
-    # if i <= 1:
-    #     continue
-    # else:
-    #     if i <= 25:
-    #         pass
-    #     else:
-    #         break
-
-    # if i <= 20:
-    #     pass
-    # else:
-    #     break
-    
-    j = 0
-    video = cv2.VideoCapture(mov_path)
-    save_folder = os.path.join('/home/ubuntu/Media/hdd1/Dataset/adobe240fps/visualization/', mov_path.split('/')[-1].split('.')[0])
-    check_if_folder_exist(save_folder)
-    success, frame = video.read()
-    while success:
-        img_cv2 = np.transpose(frame, (0, 1, 2))
-        
-        cv2.imwrite(os.path.join(save_folder, str(j) + '.png'), img_cv2)
-        # single_list.append(mov_path.split('/')[-1].split('.')[0] + '_' + str(j) + '.png')
+    if mov_path.split('/')[-1].split('.')[0] in train_list:
+        mov_folder = os.path.join(frameFolder, 'train')
+        image_index = 0
+        folder_index = 0
+        video = cv2.VideoCapture(mov_path)
         success, frame = video.read()
-        print(str(i) + ' ' + str(j))
-        j += 1
+        frame = np.transpose(frame, (0, 1, 2))
+        while success:
+            save_folder = os.path.join(mov_folder, mov_path.split('/')[-1].split('.')[0], "{:04d}".format(folder_index))
+            check_if_folder_exist(save_folder)
+            cv2.imwrite(os.path.join(save_folder, 'im' + str(image_index + 1) + '.png'), frame)
+            print(str(i) + ' ' + str(image_index) + ' ' + str(folder_index))
+            image_index += 1
+            if image_index == 7:
+                folder_index += 1
+                image_index = 0
+            success, frame = video.read()
+            if not success:
+                break
+            frame = np.transpose(frame, (0, 1, 2))
+        if len(glob.glob(os.path.join(save_folder, '*.png'))) != 7:
+            shutil.rmtree(save_folder)
+        continue
+        
+    if mov_path.split('/')[-1].split('.')[0] in valid_list:
+        mov_folder = os.path.join(frameFolder, 'valid')
+    elif mov_path.split('/')[-1].split('.')[0] in test_list:
+        mov_folder = os.path.join(frameFolder, 'test')
     
-    # end_point = int(len(single_list)/10) * 10
-    # single_list = single_list[0:end_point]
-    # name_list += single_list
-    # np.save('../data/adobe240fps_sub10000_valid_dict.npy', np.array(name_list))
-    # np.save('./data/adobe240fps/' + mov_path.split('/')[-1].split('.')[0] + '.npy', np.array(np_dict))
+    image_index = 0
+    video = cv2.VideoCapture(mov_path)
+    success, frame = video.read()
+    frame = np.transpose(frame, (0, 1, 2))
+    while success:
+        save_folder = os.path.join(mov_folder, mov_path.split('/')[-1].split('.')[0])
+        check_if_folder_exist(save_folder)
+        cv2.imwrite(os.path.join(save_folder, str(image_index) + '.png'), frame)
+        print(str(i) + ' ' + str(image_index))
+        image_index += 1
+        success, frame = video.read()
+        if not success:
+            break
+        frame = np.transpose(frame, (0, 1, 2))

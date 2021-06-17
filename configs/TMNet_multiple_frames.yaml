@@ -5,7 +5,7 @@ distortion: sr
 scale: 4
 gpu_ids: [0, 1]
 dist: true
-time_pth: ./checkpoints/tmnet_single_frame.pth
+time_pth: ./checkpoints/tmnet_multiple_frames.pth
 
 datasets:
   train:
@@ -14,9 +14,9 @@ datasets:
     interval_list: [1]
     random_reverse: true
     border_mode: false
-    dataroot_GT: ./datasets/adobe240fps/train_HR.lmdb
-    dataroot_LQ: ./datasets/adobe240fps/train_LR.lmdb
-    cache_keys: ./datasets/adobe240fps/adobe240fps_train_keys.pkl 
+    dataroot_GT: ./datasets/adobe240fps/adobe240fps_train_HR7.lmdb
+    dataroot_LQ: ./datasets/adobe240fps/adobe240fps_train_LR7.lmdb
+    cache_keys: ./datasets/adobe240fps/adobe240fps_train_keys.pkl
 
     N_frames: 7
     use_shuffle: true

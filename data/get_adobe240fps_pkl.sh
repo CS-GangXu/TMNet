@@ -1,0 +1,1 @@
+mv /home/ubuntu/Dataset/adobe240fps/adobe240fps_train_HR7.lmdb/Vimeo7_train_keys.pkl /home/ubuntu/Dataset/adobe240fps/adobe240fps_train_keys.pkl
