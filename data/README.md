@@ -96,4 +96,77 @@ vid4
 We only use this dataset for evaluation.
 
 ## Adobe240fps Dataset
-You can download Adobe240fps via [Link](http://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring/DeepVideoDeblurring_Dataset_Original_High_FPS_Videos.zip),
+We recommend that you use the ```opencv-python``` with the version 4.4.0.46.
+
+### 1. Download Dataset.
+
+You can download Adobe240fps via [Link](http://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring/DeepVideoDeblurring_Dataset_Original_High_FPS_Videos.zip) and extract the video files in ```$ROOT/data/adobe240fps/video``` folder.
+
+Then, You should download the record files: adobe240fps_folder_*.txt (adobe240fps_folder_train.txt, adobe240fps_folder_valid.txt, adobe240fps_folder_test.txt), which can be downloaded from [Link](https://drive.google.com/drive/folders/1PjXClB-S8pyB6y1UWJQnZK7fela5Lcu1) for following processing operations.
+### 2. Extract frames from the video files (remember to configure the input and output path first!).
+```
+cd $ROOT/data
+python generate_frames_from_adobe240fps.py
+```
+### 3. Create the HR and LR image pairs (remember to configure the input and output path first!).
+```
+cd $ROOT/data
+python generate_data_adobe240fps.py
+```
+### 4. Create LMDB files.
+You should create file for following lmdb processing operation first.
+```
+cd $ROOT/data
+python create_lmdb_list_adobe240fps.py
+```
+Create LMDB file.
+```
+cd $ROOT/data
+python create_lmdb_mp_adobe240fps_LR.py
+python create_lmdb_mp_adobe240fps_HR.py
+```
+Get ```pkl``` file.
+```
+cd $ROOT/data
+sh get_adobe240fps_pkl.sh
+```
+### 5. Organize the files for validation and test.
+
+We recommend that you organize the files of ```valid``` and ```test``` into the following structure:
+```
+adobe240fps
+├── valid
+│   ├── HR
+│   │   ├── IMG_0030
+│   │   │   ├── 0.png
+│   │   │   ├── ...
+│   │   │   └── ***.png
+│   │   ├── GOPR9654a
+│   │   ├── IMG_0002
+│   │   └── IMG_0153
+│   └── LR
+│       ├── IMG_0030
+│       │   ├── 0.png
+│       │   ├── ...
+│       │   └── ***.png
+│       ├── GOPR9654a
+│       ├── IMG_0002
+│       └── IMG_0153
+└── test
+    ├── HR
+    │   ├── GOPR9653
+    │   │   ├── 0.png
+    │   │   ├── ...
+    │   │   └── ***.png
+    │   ├── IMG_0001
+    │   ├── IMG_0003
+    │   └── IMG_0004a
+    └── LR
+        ├── GOPR9653
+        │   ├── 0.png
+        │   ├── ...
+        │   └── ***.png
+        ├── IMG_0001
+        ├── IMG_0003
+        └── IMG_0004a
+```
