@@ -67,7 +67,7 @@ bash make.sh
 You need to prepare datasets for following training and testing activities, the detailed information is at [Dataset Setup](data/README.md).
 
 ### 2. Get pretrained models
-Our pretrained models (```tmnet_single_frame.pth``` and ```tmnet_multiple_frames.pth```) can be downloaded via [Link](https://drive.google.com/drive/folders/1PjXClB-S8pyB6y1UWJQnZK7fela5Lcu1?usp=sharing). After you download the pretrained models, please put them into the ```$ROOT/checkpoints``` folder.
+Our pretrained models (```tmnet_single_frame.pth``` and ```tmnet_multiple_frames.pth```) can be downloaded via [Google Drive](https://drive.google.com/drive/folders/1PjXClB-S8pyB6y1UWJQnZK7fela5Lcu1?usp=sharing) or [Baidu Netdisk](https://pan.baidu.com/s/15yzRVzuZia0Fi76KWOWuig)(access code: wiq7). After you download the pretrained models, please put them into the ```$ROOT/checkpoints``` folder.
 
 ### 3. Set up configuration
 Our training settings in the paper can be found at ```$ROOT/configs/TMNet_single_frame.yaml``` and ```$ROOT/configs/TMNet_multiple_frames.yaml``` . We'll take these settings as an example to illustrate our training strategy in our paper.
