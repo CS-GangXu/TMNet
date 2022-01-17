@@ -149,7 +149,7 @@ If you find the code helpful in your research or work, please cite our paper.
 ```
 
 # Acknowledgment
-Our code is built on [Zooming-Slow-Mo-CVPR-2020](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020) and [EDVR](https://github.com/xinntao/EDVR). We thank the authors for sharing their codes.
+Our code is built on [Zooming-Slow-Mo-CVPR-2020](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020) and [EDVR](https://github.com/xinntao/EDVR). We thank the authors for sharing their codes. We thank MindSpore for the partial support of this work.
 
 # Contact
 If you have any questions, feel free to E-mail me with [gangxu@mail.nankai.edu.cn](gangxu@mail.nankai.edu.cn).
