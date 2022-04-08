@@ -100,7 +100,7 @@ We recommend that you use the ```opencv-python``` with the version 4.4.0.46.
 
 ### 1. Download Dataset.
 
-You can download Adobe240fps via [Link](http://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring/DeepVideoDeblurring_Dataset_Original_High_FPS_Videos.zip) and extract the video files in ```$ROOT/data/adobe240fps/video``` folder.
+You can download Adobe240fps via [Link](http://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring/DeepVideoDeblurring_Dataset_Original_High_FPS_Videos.zip)(If nothing happens, you can insert this link to the address bar of the browser and press the Enter key.) and extract the video files in ```$ROOT/data/adobe240fps/video``` folder.
 
 Then, You should download the record files: adobe240fps_folder_*.txt (adobe240fps_folder_train.txt, adobe240fps_folder_valid.txt, adobe240fps_folder_test.txt), which can be downloaded from [Link](https://drive.google.com/drive/folders/1PjXClB-S8pyB6y1UWJQnZK7fela5Lcu1) for following processing operations.
 ### 2. Extract frames from the video files (remember to configure the input and output path first!).
