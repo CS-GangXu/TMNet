@@ -5,7 +5,7 @@ distortion: sr
 scale: 4
 gpu_ids: [0, 1]
 dist: true
-time_pth: ./checkpoints/tmnet_multiple_frames.pth
+time_pth: ./checkpoints/tmnet_single_frame.pth
 
 datasets:
   train:
